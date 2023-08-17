@@ -1,17 +1,19 @@
+//  Library imports
 import { NavLink, Form, Outlet } from "react-router-dom";
-
 import React from "react";
+
+import "./SigninLayout.css"
 
 const SignInLayout = () => {
   return (
     <React.Fragment>
-      <div className="signin-container">
-        <div className="signin-text">
+      <div className="signin-container ">  {/* Sign In Container START */}
+        <div className="signin-text "> {/* Sign In Container text START */}
           <h1>Sign In</h1>
           <h3>Sign in and start managing your books!</h3>
-        </div>
+        </div>  {/* Sign In Container text END */}
 
-        <Form>
+        <Form className="signin-form ">
           <input
             className="email-input"
             type="email"
@@ -40,10 +42,9 @@ const SignInLayout = () => {
         </div>
 
         <button className="signin-btn">Sign In</button>
-      </div>
-      <div>
-        <Outlet />
-      </div>
+      </div> {/* Sign In Container END */}
+
+      <Outlet />
     </React.Fragment>
   );
 };

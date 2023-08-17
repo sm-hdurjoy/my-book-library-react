@@ -10,6 +10,7 @@ import {
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Help from "./pages/Help/Help";
+import NotFound from "./pages/NotFound";
 
 // Layout Imports
 import HomeLayout from "./layouts/HomeLayout";
@@ -23,9 +24,12 @@ const route = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="help" element={<Help />} />
+
       <Route path="signin" element={<SignInLayout />}>
         <Route path="forgetPassword" element={<ForgetPassword />} />
       </Route>
+
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );

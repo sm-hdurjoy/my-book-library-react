@@ -1,0 +1,109 @@
+/* Navigation Bar Elements including Title and Nav Links */
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightUI);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Website title and current directory */
+header .website-title-current-directory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+/* website title */
+header .website-title-current-directory h1 {
+  border-bottom: 3px solid var(--primary);
+  font-size: 2rem;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.breadcrumbs > * {
+  display: inline-block;
+}
+
+.breadcrumbs .crumb:after {
+  content: ">";
+  margin: 0 10px;
+}
+
+.breadcrumbs .crumb:last-child:after {
+  display: none;
+}
+
+.breadcrumbs .crumb a {
+  color: black;
+}
+
+/* Website navigation bar links */
+header nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 16px;
+  background-color: var(--lightUI);
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Search Book Box */
+.search-box {
+  height: 21px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.search-box:hover {
+  border-color: var(--primary);
+}
+
+header nav a {
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  border: 2px solid black;
+}
+
+header nav a.active {
+  background: var(--primary);
+  color: white;
+}
+
+header nav a:hover {
+  border-color: var(--primary);
+}
+
+@media screen and (min-width: 840px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header .website-title-current-directory,
+  header nav {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1020px) and (min-width: 840px) {
+  header .website-title-current-directory {
+    display: flex;
+    flex-direction: column;
+  }
+}
