@@ -2,8 +2,8 @@
 import { NavLink, Outlet, Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 
-import "../styles/Navbar.css"
-import "../styles/Sidedrawer.css"
+import "../styles/Navbar.css";
+import "../styles/Sidedrawer.css";
 
 // Pages imports
 import Breadcrumbs from "../components/Breadcrumbs";
@@ -21,7 +21,7 @@ const RootLayout = () => {
           <input className="search-box" placeholder="Search a book..."></input>
           <NavLink to="/">Home</NavLink>
           <NavLink to="about">About</NavLink>
-          <NavLink to="help">Help</NavLink>
+          <NavLink to="addbook">Add a Book</NavLink>
           <NavLink to="signin">Sign In</NavLink>
         </nav>
       </header>

@@ -33,6 +33,7 @@ main {
 
 .main-body {
   display: flex;
+  flex-direction: column;
 }
 
 .border {

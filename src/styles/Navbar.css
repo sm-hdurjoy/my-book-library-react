@@ -5,11 +5,8 @@ header {
   background-color: var(--lightUI);
   justify-content: center;
   align-items: center;
-  width: 100%;
   flex-direction: column;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px 10px 0 10px;
 }
 
 /* Website title and current directory */

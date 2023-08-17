@@ -1,0 +1,41 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #bbb;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.book-card-image {
+  width: 154px;
+}
+
+.book-title {
+  text-align: center;
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.card-author {
+  text-align: center;
+}
+
+.card-category {
+  text-align: center;
+}
+
+.carousel-container{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  .carousel-container{
+    display: flex;
+    flex-direction: row;
+  }
+} 

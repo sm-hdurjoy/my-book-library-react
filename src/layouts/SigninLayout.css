@@ -36,14 +36,15 @@
   width: 100%;
   padding: 10px 30px;
   margin: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
 }
 
 /* Remember me and forget password buttons */
 .remember-me-forget-pass {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 260px;
+  justify-content: space-between;
   padding-bottom: 20px;
 }
 

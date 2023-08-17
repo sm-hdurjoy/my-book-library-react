@@ -1,0 +1,63 @@
+:root {
+  --darkBG: #555;
+  --lightBG: #eee;
+  --darkUI: #333;
+  --lightUI: #ddd;
+  --darkText: #ddd;
+  --lightText: #555;
+  --primary: #bc4123;
+  --secondary: #2b3452;
+}
+
+.book-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-description-image {
+  width: 300px;
+  margin: 20px;
+}
+
+.book-description-info {
+  width: 90%;
+}
+
+.book-description-info h1 {
+  padding: 10px;
+  border-bottom: 3px solid #bbb;
+  text-align: center;
+}
+
+.book-description-info h2 {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 3px solid #bbb;
+}
+
+.book-description-info h3 {
+  text-align: center;
+  padding: 10px;
+}
+
+.book-description-sold {
+  border-bottom: 3px solid #bbb;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+@media screen and (min-width: 950px) {
+  .book-description-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .book-description-info {
+    display: flex;
+    flex-direction: column;
+  }
+}

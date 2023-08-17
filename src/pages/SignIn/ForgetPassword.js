@@ -1,5 +1,5 @@
 import { Form } from "react-router-dom";
-import "./FogetPassword.css"
+import "./FogetPassword.css";
 
 const ForgetPassword = () => {
   return (

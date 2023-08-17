@@ -1,0 +1,32 @@
+:root {
+  --darkBG: #555;
+  --lightBG: #eee;
+  --darkUI: #333;
+  --lightUI: #ddd;
+  --darkText: #ddd;
+  --lightText: #555;
+  --primary: #bc4123;
+  --secondary: #2b3452;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.about {
+  width: 100%;
+  background-color: var(--lightUI);
+}
+
+.book-description {
+  background-color: #bbb;
+}
+
+.book-description h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
