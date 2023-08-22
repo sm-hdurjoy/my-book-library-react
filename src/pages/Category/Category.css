@@ -1,0 +1,18 @@
+:root {
+  --darkBG: #555;
+  --lightBG: #eee;
+  --darkUI: #333;
+  --lightUI: #ddd;
+  --darkText: #ddd;
+  --lightText: #555;
+  --primary: #bc4123;
+  --secondary: #2b3452;
+}
+
+.category-header {
+  background-color: #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}

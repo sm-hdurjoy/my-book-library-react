@@ -6,25 +6,26 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-// Pages Imports
+// Components/Pages Imports
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Help from "./pages/Add Book/AddBook";
+import BookDescription from "./pages/Book Description/BookDescriptionHeader";
+import AddBook from "./pages/Add Book/AddBook";
 import NotFound from "./pages/NotFound";
+import Category from "./pages/Category/Category";
+import ForgetPassword from "./pages/SignIn/ForgetPassword";
 
 // Layout Imports
 import HomeLayout from "./layouts/HomeLayout";
 import SignInLayout from "./layouts/SignInLayout";
-import ForgetPassword from "./pages/SignIn/ForgetPassword";
 
 // Creating Browser Router Function
 const route = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<HomeLayout />}>
       <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="addbook" element={<Help />} />
-
+      <Route path="/bookdescription/:bookId" element={<BookDescription />} />
+      <Route path="addbook" element={<AddBook />} />
+      <Route path="/categories/:categoryName" element={<Category />} />
       <Route path="signin" element={<SignInLayout />}>
         <Route path="forgetPassword" element={<ForgetPassword />} />
       </Route>

@@ -1,0 +1,25 @@
+.book-list-item-container {
+  display: flex;
+  margin: 15px;
+  padding: 0 0 15px 15px;
+
+  border-bottom: 3px solid #bbb;
+}
+
+.bli-cover-title {
+  display: flex;
+  width: 55%;
+  align-items: center;
+}
+
+.bli-cover {
+  width: 40px;
+  margin-right: 40px;
+}
+
+.bli-author-ry-category {
+  display: flex;
+  width: 45%;
+  justify-content: space-around;
+  align-items: center;
+}

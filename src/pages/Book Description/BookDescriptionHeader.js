@@ -1,8 +1,12 @@
-import React from "react";
-import BookDescription from "../../components/Bookcard/BookDescription";
-import "./About.css";
+// Library Imports
 
-const About = () => {
+// Components/Pages Imports
+import BookDescription from "../../components/Bookcard/BookDescription";
+
+// Local Styles Imports
+import "./BookDescriptionHeader.css";
+
+const BookDescriptionHeader = () => {
   return (
     <div className="about">
       <div className="book-description">
@@ -13,4 +17,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default BookDescriptionHeader;

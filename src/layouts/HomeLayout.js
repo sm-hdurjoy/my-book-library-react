@@ -2,12 +2,14 @@
 import { NavLink, Outlet, Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 
+// Local Styles Imports
 import "../styles/Navbar.css";
 import "../styles/Sidedrawer.css";
 
-// Pages imports
+// Components/Pages imports
 import Breadcrumbs from "../components/Breadcrumbs";
 import { SideDrawerData } from "../components/SideDrawerData";
+import BookContextProvider from "../context/BookContext";
 
 const RootLayout = () => {
   return (
@@ -20,7 +22,6 @@ const RootLayout = () => {
         <nav>
           <input className="search-box" placeholder="Search a book..."></input>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="about">About</NavLink>
           <NavLink to="addbook">Add a Book</NavLink>
           <NavLink to="signin">Sign In</NavLink>
         </nav>
@@ -32,10 +33,10 @@ const RootLayout = () => {
             {SideDrawerData.map((item, index) => {
               return (
                 <div key={index} className={item.cName}>
-                  <Link to={item.path}>
+                  <NavLink to={`categories/${item.title}`}>
                     {item.icon}
                     <span>{item.title}</span>
-                  </Link>
+                  </NavLink>
                 </div>
               );
             })}
@@ -43,7 +44,9 @@ const RootLayout = () => {
         </IconContext.Provider>
 
         <main>
-          <Outlet />
+          <BookContextProvider>
+            <Outlet />
+          </BookContextProvider>
         </main>
       </div>
     </>

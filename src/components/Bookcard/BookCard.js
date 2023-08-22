@@ -1,6 +1,7 @@
-import "./Bookcard.css"
+// Local Styles Imports
+import "./Bookcard.css";
 
-const BookCard = () => {
+const BookCard = (props) => {
   return (
     <div className="card-container">
       <img

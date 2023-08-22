@@ -15,7 +15,7 @@
   border: 0;
 }
 
-.home {
+.trending {
   width: 100%;
   background-color: var(--lightUI);
   /* height: 80%; */
@@ -33,7 +33,17 @@
 }
 
 .carousel-container {
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+
+.book-list {
+  background-color: var(--lightUI);
+}
+
+.bookdesc {
+  text-decoration: none;
+  color: var(--lightText);
 }
