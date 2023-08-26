@@ -10,7 +10,7 @@ import BookListItem from "../../components/BookList/BookListItem";
 
 // Contest Imports
 import { BookContext } from "../../context/BookContext";
-import Header from "../../components/BookList/Header";
+import BookListHeader from "../../components/BookList/BookListHeader";
 
 const Category = () => {
   const { categoryName } = useParams();
@@ -22,14 +22,14 @@ const Category = () => {
     getBooksByCategory(categoryName).then((data) =>
       setSortedBooks(data.sort((a, b) => a.title.localeCompare(b.title)))
     );
-  }, [categoryName]);
+  }, [categoryName, getBooksByCategory]);
 
   return (
     <div className="book-list">
       <div className="category-header">
         <h2>Category : {categoryName}</h2>
       </div>
-      <Header />
+      <BookListHeader />
       {sortedBooks.length > 0 ? (
         sortedBooks.map((sortedBooks) => {
           return (

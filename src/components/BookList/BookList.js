@@ -3,7 +3,7 @@
 // Components/Pages Imports
 // Local Styles Imports
 import "./BookList.css";
-import Header from "./Header";
+import BookListHeader from "./BookListHeader";
 
 // Contest Imports
 
@@ -13,7 +13,7 @@ const BookList = () => {
       <div className="book-list-header">
         <h2>Book List</h2>
       </div>
-      <Header />
+      <BookListHeader />
     </div>
   );
 };
