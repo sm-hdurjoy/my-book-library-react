@@ -26,7 +26,7 @@ const BookListItem = ({
         <h3>{author}</h3>
         <h3>{releaseYear}</h3>
         <h3>{category}</h3>
-        <FaGratipay className="fav-icon" />
+        {/* <FaGratipay className="fav-icon" /> */}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 // Library Imports
 import { NavLink, Outlet } from "react-router-dom";
 import { IconContext } from "react-icons";
+import { useState, useContext } from "react";
 
 // Local Styles Imports
 import "../styles/Navbar.css";
@@ -13,7 +14,13 @@ import BookContextProvider from "../context/BookContext";
 import SearchBox from "../components/SearchBox";
 
 const RootLayout = () => {
+  const [isCategoriesActive, setIsCategoriesActive] = useState(false);
 
+  const handleToggleCategories = () => {
+    setIsCategoriesActive(!isCategoriesActive);
+  };
+
+  // console.log(isCategoriesActive);
 
   return (
     <>
@@ -33,17 +40,21 @@ const RootLayout = () => {
         <div className="main-body">
           <IconContext.Provider value={{ color: "#000" }}>
             <div className="nav-menu">
-              <h1 className="db-h1">Categories</h1>
-              {SideDrawerData.map((item, index) => {
-                return (
-                  <div key={index} className={item.cName}>
-                    <NavLink to={`categories/${item.title}`}>
-                      {item.icon}
-                      <span>{item.title}</span>
-                    </NavLink>
-                  </div>
-                );
-              })}
+              <h1 className="db-h1" onClick={handleToggleCategories}>
+                Categories
+              </h1>
+              {!isCategoriesActive && (
+                <div className="categories-list">
+                  {SideDrawerData.map((item, index) => (
+                    <div key={index} className={item.cName}>
+                      <NavLink to={`categories/${item.title}`}>
+                        {item.icon}
+                        <span>{item.title}</span>
+                      </NavLink>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </IconContext.Provider>
 

@@ -23,6 +23,7 @@
 
 .trending-books {
   background-color: #bbb;
+  cursor: pointer;
 }
 
 .trending-books h2 {
@@ -37,8 +38,6 @@
   align-items: center;
 }
 
-
-
 .book-list {
   background-color: var(--lightUI);
 }
@@ -46,4 +45,8 @@
 .bookdesc {
   text-decoration: none;
   color: var(--lightText);
+}
+
+.border {
+  border: 1px solid red;
 }

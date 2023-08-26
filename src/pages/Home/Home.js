@@ -1,32 +1,48 @@
 // Library Imports
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 // Local Styles import
 import "./Home.css";
 
 // Components/Pages Import
 import BookCard from "../../components/Bookcard/BookCard";
-import BookList from "../../BookList/BookList";
-import BookListItem from "../../BookList/BookListItem";
- 
+import BookList from "../../components/BookList/BookList";
+import BookListItem from "../../components/BookList/BookListItem";
+
 // Context Imports
 import { BookContext } from "../../context/BookContext";
 
 const Home = () => {
+  const [isTrendingBookActive, setisTrendingBookActive] = useState(false);
+
+  const [books, setBooks] = useState([])
   // Fetch data from json server
-  const { books } = useContext(BookContext);
+  const { getBooks } = useContext(BookContext);
+
+  useEffect( () => {
+    getBooks().then(data => setBooks(data))
+  },[])
+
+  const handleTrendingBookToggle = () => {
+    setisTrendingBookActive(!isTrendingBookActive);
+  };
+
+  console.log(isTrendingBookActive);
 
   return (
     <>
       <div className="trending">
-        <div className="trending-books">
+        <div className="trending-books" onClick={handleTrendingBookToggle}>
           <h2>Trending books</h2>
         </div>
-        <div className="carousel-container">
-          <BookCard />
-          <BookCard />
-        </div>
+        {!isTrendingBookActive && (
+          <div className="carousel-container">
+            <BookCard />
+            <BookCard />
+            <BookCard />
+          </div>
+        )}
       </div>
 
       <div className="book-list">

@@ -11,7 +11,7 @@ const Header = () => {
         <h3>Author</h3>
         <h3>Released Year</h3>
         <h3>Category</h3>
-        <h3>Add To FAV</h3>
+        {/* <h3>Add To FAV</h3> */}
       </div>
     </div>
   );
